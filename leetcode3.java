@@ -6,6 +6,7 @@ public class leetcode3 {
         String str = in.nextLine();
         int l = lengthOfLongestSubstring(str);
         System.out.println(l);
+        in.close();
     }
 
     static int lengthOfLongestSubstring(String s) {

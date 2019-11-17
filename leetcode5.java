@@ -11,6 +11,7 @@ public class leetcode5 {
          * for (int i = 1; i <= 500; i++) { str += 'a'; }
          */
         System.out.println(longestPalindrome(str));
+        in.close();
     }
 
     public static String longestPalindrome(String s) {

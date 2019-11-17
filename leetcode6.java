@@ -7,6 +7,7 @@ public class leetcode6 {
         in.nextLine();
         String s = in.nextLine();
         System.out.println(convert(s, n));
+        in.close();
     }
 
     public static String convert(String s, int numRows) {

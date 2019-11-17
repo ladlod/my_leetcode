@@ -14,6 +14,7 @@ public class leetcode10 {
         String s = in.nextLine();
         String p = in.nextLine();
         System.out.println(isMatch(s, p));
+        in.close();
     }
 
     public static boolean isMatch(String s, String p) {

@@ -1,7 +1,5 @@
 import java.util.Scanner;
 import java.util.Stack;
-import java.util.List;
-import java.util.ArrayList;
 
 public class leetcode37 {
     public static void main(String[] args) {
