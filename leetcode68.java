@@ -1,3 +1,5 @@
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class leetcode68{
     public static void main(String[] args){
@@ -9,28 +11,66 @@ public class leetcode68{
             words[i] = in.nextLine();
         }
         int maxWidth = in.nextInt();
-        /*for(int i = 0; i < n; i++)
-            System.out.print(i + "=" + words[i] + " ");
-        System.out.println();*/
-        dealWords(words, maxWidth);
+        System.out.println(dealWords(words, maxWidth));
         in.close();
     }
-    static void dealWords(String[] words, int maxWidth){
+    static List<String> dealWords(String[] words, int maxWidth){
+        List<String> res = new ArrayList<>();
         int i = 0, l = 0, flag = 0;
         while(i < words.length){
-            if(l + words[i].length() + 1 <= maxWidth)
+            if(l + words[i].length() <= maxWidth){
                 l = l + words[i].length() + 1;
+                //System.out.println("l=" + l);
+            }
             else{
-                printMaxW(words, flag, i, maxWidth);
+                //System.out.println("start=" + flag + " end=" + i);
+                res.add(MaxW(words, flag, i, maxWidth));
                 flag = i;
-                l = 0;
+                l = words[i].length() + 1;
             }
             i++;
         }
-        printMaxW(words, flag, words.length, maxWidth);        
+        String last = "";
+        int len = 0;
+        for(int j = flag; j < words.length; j++){
+            last = last + words[j] + " ";
+            len = len + words[j].length() + 1;
+        }
+        for(int j = len - 1; j < maxWidth; j++)
+                last += " ";
+        res.add(last);
+
+        return res;       
     }
 
-    static void printMaxW(String[] words, int start, int i, int maxWidth){
+    static String MaxW(String[] words, int start, int end, int maxWidth){
+        String res = "";
+        if(end - start > 1){
+            int len = 0;
+            for(int i = start; i < end; i++)
+                len += words[i].length();
+            int insert_num = (maxWidth - len) / (end - start - 1);
+            int add_num = (maxWidth - len) % (end - start - 1);
 
+            for(int i  = start; i < end; i++){
+                res += words[i];
+                //System.out.print(words[i]);
+                int j = 0;
+                if(i != end - 1){
+                    while(j < insert_num + (add_num > 0 ? 1 : 0)){
+                        res += " ";
+                        j++;
+                    }
+                    add_num--;
+                }
+            }
+        }
+        else{
+            res += words[start];
+            //System.out.print(words[start]);
+            for(int i = words[start].length(); i < maxWidth; i++)
+                res += " ";
+        }
+        return res;
     }
 }
