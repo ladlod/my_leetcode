@@ -33,6 +33,6 @@ public class leetcode49 {
             }
         }
 
-        return new ArrayList(map.values());
+        return new ArrayList<List<String>>(map.values());
     }
 }
