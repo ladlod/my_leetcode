@@ -1,2 +1,2 @@
 # leetcode
-[leetcode](https://leetcode.com)
+[leetcode.com](https://leetcode.com)
