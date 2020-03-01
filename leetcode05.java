@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class leetcode5 {
+public class leetcode05 {
     public static void main(String args[]) {
         String str = "";
 

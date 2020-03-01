@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class leetcode8 {
+public class leetcode08 {
     public static void main(String atgs[]) {
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();

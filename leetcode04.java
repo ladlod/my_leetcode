@@ -1,6 +1,6 @@
 //import java.util.Scanner;
 
-public class leetcode4 {
+public class leetcode04 {
     public static void main(String args[]) {
         int[] nums1 = { 3, 4 };
         int[] nums2 = { 1, 2 };
