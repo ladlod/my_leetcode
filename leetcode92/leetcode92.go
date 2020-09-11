@@ -11,7 +11,7 @@ func main() {
 	var m, n int
 	fmt.Scanf("%s", m)
 	fmt.Scanf("%s", n)
-	var l *ListNode
+	l := &ListNode{}
 	p := l
 	for i := 1; i <= 10; i++ {
 		p.Val = i
