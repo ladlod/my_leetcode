@@ -1,32 +1,5 @@
 package main
 
-import "fmt"
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func main() {
-	var m, n int
-	fmt.Scanf("%d", &m)
-	fmt.Scanf("%d", &n)
-	l := &ListNode{}
-	p := l
-	for i := 1; i <= 10; i++ {
-		p.Val = i
-		if i != 10 {
-			p.Next = new(ListNode)
-		}
-		p = p.Next
-	}
-	l = reverseBetween(l, m, n)
-	for l != nil {
-		fmt.Printf("%d ", l.Val)
-		l = l.Next
-	}
-}
-
 func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	if m >= n || m < 1 {
 		return head

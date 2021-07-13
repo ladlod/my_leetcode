@@ -1,12 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	var n int
-	fmt.Scanf("%d", &n)
-	fmt.Println(grayCode(n))
-}
 func grayCode(n int) []int {
 	rtn := make([]int, 0)
 	rtn = append(rtn, 0)

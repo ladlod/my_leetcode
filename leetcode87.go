@@ -1,17 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"reflect"
 )
-
-func main() {
-	var s1, s2 string
-	fmt.Scanf("%s", &s1)
-	fmt.Scanf("%s", &s2)
-
-	fmt.Println(isScramble(s1, s2))
-}
 
 func isScramble(s1 string, s2 string) bool {
 	if s1 == s2 {

@@ -1,22 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
-
-func main() {
-	var n int
-	fmt.Scanf("%d", &n)
-	var nums []int
-	for i := 0; i < n; i++ {
-		var num int
-		fmt.Scanf("%d", &num)
-		nums = append(nums, num)
-	}
-
-	fmt.Println(subsetsWithDup(nums))
-}
 
 func subsetsWithDup(nums []int) [][]int {
 	if len(nums) == 0 {

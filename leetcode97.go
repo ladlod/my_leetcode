@@ -1,17 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	var a, b, c string
-	fmt.Scanf("%s", &a)
-	fmt.Scanf("%s", &b)
-	fmt.Scanf("%s", &c)
-	fmt.Println(isInterleave(a, b, c))
-}
-
 func isInterleave(s1 string, s2 string, s3 string) bool {
 	if len(s1)+len(s2) != len(s3) {
 		return false

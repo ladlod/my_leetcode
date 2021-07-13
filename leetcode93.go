@@ -5,12 +5,6 @@ import (
 	"strconv"
 )
 
-func main() {
-	var str string
-	fmt.Scanf("%s", &str)
-	fmt.Println(restoreIpAddresses(str))
-}
-
 func restoreIpAddresses(s string) []string {
 	rtn := make([]string, 0)
 	for i := 1; i <= 3; i++ {

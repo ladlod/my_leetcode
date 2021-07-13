@@ -1,15 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	var n int
-	fmt.Scanf("%d", &n)
-	fmt.Println(numTrees(n))
-}
-
 func numTrees(n int) int {
 	if n <= 0 {
 		return 0

@@ -1,16 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
-
-func main() {
-	var s string
-	fmt.Scanf("%s", &s)
-	fmt.Println(numDecodings(s))
-}
 
 func numDecodings(s string) int {
 	l := len(s)
