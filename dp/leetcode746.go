@@ -1,4 +1,4 @@
-package main
+package dp
 
 func minCostClimbingStairs746(cost []int) int {
 	if len(cost) < 2 {

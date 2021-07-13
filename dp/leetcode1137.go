@@ -1,4 +1,4 @@
-package main
+package dp
 
 func tribonacci1137(n int) int {
 	if n == 0 {

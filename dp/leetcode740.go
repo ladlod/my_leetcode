@@ -1,4 +1,4 @@
-package main
+package dp
 
 func deleteAndEarn740(nums []int) int {
 	numMap := make(map[int]int)

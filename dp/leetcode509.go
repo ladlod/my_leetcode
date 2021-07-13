@@ -1,4 +1,4 @@
-package main
+package dp
 
 func fib509(n int) int {
 	if n == 0 {

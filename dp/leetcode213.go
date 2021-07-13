@@ -1,4 +1,4 @@
-package main
+package dp
 
 func rob213(nums []int) int {
 	l := len(nums)

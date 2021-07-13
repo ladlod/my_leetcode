@@ -1,4 +1,4 @@
-package main
+package dp
 
 func climbStairs70(n int) int {
 	if n <= 0 {
