@@ -27,7 +27,7 @@ func subsetsWithDup(nums []int) [][]int {
 					rtn = append(rtn, append(t, nums[i]))
 				}
 			} else {
-				tmp2 := [][]int{[]int{nums[i]}}
+				tmp2 := [][]int{{nums[i]}}
 				for ; flag > 0; flag-- {
 					tmp2 = append(tmp2, append(tmp2[len(tmp2)-1], nums[i]))
 				}
