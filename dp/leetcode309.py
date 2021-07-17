@@ -11,7 +11,7 @@ def maxProfit(prices):
         res2 = max(res2, res3)
         res3 = res1 + prices[i]
 
-        return max(res1, res2, res3)
+    return max(res1, res2, res3)
 
 if __name__ == '__main__':
     print(maxProfit([1,2,3,0,2]))
