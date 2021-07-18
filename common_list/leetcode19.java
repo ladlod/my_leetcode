@@ -3,14 +3,6 @@ package common_list;
 import java.util.Scanner;
 //import java.util.List;;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 public class leetcode19 {
     public static void main(String[] args) {

@@ -1,14 +1,5 @@
 package common_list;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
 public class leetcode23 {
     public static void main(String[] args) {
 
