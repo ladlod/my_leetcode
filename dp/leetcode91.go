@@ -1,4 +1,4 @@
-package common_list
+package dp
 
 import (
 	"strconv"
@@ -34,7 +34,7 @@ func numDecodings(s string) int {
 	for i := l - 3; i >= 0; i-- {
 		num, _ := strconv.ParseInt(s[i:i+2], 10, 64)
 		if num%10 == 0 {
-			if num > 0 && num < 27 {
+			if num > 0 && num < 27 && s[i+2] != '0' {
 				rtn[i] = rtn[i+2]
 			} else {
 				return 0
