@@ -13,18 +13,18 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func (t *TreeNode) print() {
+func (t *TreeNode) Print() {
 	if t == nil {
 		return
 	}
 	fmt.Printf("%d ", t.Val)
 	if t.Left != nil {
-		t.Left.print()
+		t.Left.Print()
 	} else if t.Right != nil {
 		fmt.Print("null ")
 	}
 	if t.Right != nil {
-		t.Right.print()
+		t.Right.Print()
 	} else if t.Left != nil {
 		fmt.Print("null ")
 	}
