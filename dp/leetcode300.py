@@ -20,9 +20,29 @@ def lengthOfLISDp(nums):
 
 # 贪心做法
 def lengthOfLISTx(nums):
-    return
+    l = len(nums)
+    if l <= 0: return 0
+
+    res = []
+    res.append(nums[0])
+    for num in nums:
+        if num > res[len(res)-1]: res.append(num)
+        else:
+            l = 0
+            loc = r = len(res)-1
+            while l <= r:
+                t = int((l+r)/2)
+                if num <= res[t]: 
+                    loc = t
+                    r = t-1
+                elif num > res[t]:
+                    l = t+1
+            res[loc] = num
+        print(res)
+
+    return res
     
 
 if __name__ == "__main__":
     print(lengthOfLISDp([1,3,6,7,9,4,10,5,6]))
-    print(lengthOfLISTx([1,3,6,7,9,4,10,5,6]))
+    print(lengthOfLISTx([18,55,66,2,3,54]))
