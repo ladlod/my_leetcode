@@ -23,7 +23,30 @@ def minOperations(target, arr):
         v = target.get(ar, -1)
         if v >= 0: arli.append(v)
 
-    return arli
+    # print(arli)
+        
+    if len(arli) <= 0: return l
+
+    res = []
+    res.append(arli[0])
+    for num in arli:
+        if num > res[len(res)-1]: res.append(num)
+        else:
+            left = 0
+            loc = right = len(res)-1
+            while left <= right:
+                t = int((left+right)/2)
+                if num <= res[t]: 
+                    loc = t
+                    right = t-1
+                elif num > res[t]:
+                    left = t+1
+            res[loc] = num
+
+    # print(res)
+
+    return l - len(res)
+    
 
 if __name__ == '__main__':
-    print(minOperations([6,4,8,1,3,2],[4,7,6,2,3,8,6,1]))
+    print(minOperations([1, 3, 8],[2, 6]))
