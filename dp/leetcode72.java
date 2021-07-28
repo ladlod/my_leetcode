@@ -1,4 +1,4 @@
-package common_list;
+package dp;
 
 import java.util.Scanner;
 public class leetcode72{
