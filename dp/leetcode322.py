@@ -25,4 +25,4 @@ def coinChange(coins, amount):
     return res
 
 if __name__ == "__main__":
-    print(coinChange([2], 11))
+    print(coinChange([2,3], 10))
