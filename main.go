@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/ladlod/leetcode/lintcode"
+	"github.com/ladlod/leetcode/common_list"
 )
 
 func main() {
-	fmt.Println(lintcode.FirstUniqChar("lovelintcode"))
+	fmt.Println(common_list.RemoveKdigits("132", 2))
 }
