@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.RemoveKdigits("132", 2))
+	fmt.Println(common_list.RemoveKdigitsV2("143", 3))
 }
