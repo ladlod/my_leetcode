@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.RemoveKdigitsV2("143", 3))
+	fmt.Println(common_list.ThirdMax([]int{1, 2, -2147483648}))
 }
