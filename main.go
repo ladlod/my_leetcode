@@ -7,5 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.SimplifyPath("/.."))
+	t := [][]int{{0, 1, 0}, {0, 0, 1}, {1, 1, 1}, {0, 0, 0}}
+	common_list.GameOfLife(t)
+	fmt.Println(t)
 }
