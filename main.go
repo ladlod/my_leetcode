@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.Search([]int{3}, 4))
+	fmt.Println(common_list.SimplifyPath("/.."))
 }
