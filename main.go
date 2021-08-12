@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.ThirdMax([]int{1, 2, -2147483648}))
+	fmt.Println(common_list.Search([]int{3}, 4))
 }
