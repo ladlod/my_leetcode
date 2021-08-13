@@ -31,7 +31,7 @@ type LRUListNode struct {
 	Next *LRUListNode
 }
 
-func Constructor(capacity int) LRUCache {
+func ConstructorLRU(capacity int) LRUCache {
 	head := &LRUListNode{
 		Key: -1,
 	}
