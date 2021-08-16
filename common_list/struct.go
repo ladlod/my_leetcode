@@ -29,3 +29,8 @@ func (t *TreeNode) Print() {
 		fmt.Print("null ")
 	}
 }
+
+type PicNode struct {
+	Val       int
+	Neighbors []*PicNode
+}
