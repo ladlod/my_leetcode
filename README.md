@@ -6,4 +6,4 @@
 - [dp/动态规划入门列表](https://leetcode-cn.com/study-plan/dynamic-programming/?progress=7lhb02)
 
 ## 热点题目
--[LRU](https://github.com/ladlod/my_leetcode/blob/master/common_list/leetcode146.go)
+- [LRU](https://github.com/ladlod/my_leetcode/blob/master/common_list/leetcode146.go)
