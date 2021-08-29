@@ -3,11 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/ladlod/leetcode/common_list"
+	"github.com/ladlod/leetcode/week_contest"
 )
 
 func main() {
-	t := [][]int{{0, 1, 0}, {0, 0, 1}, {1, 1, 1}, {0, 0, 0}}
-	common_list.GameOfLife(t)
-	fmt.Println(t)
+	fmt.Println(week_contest.MinSessions([]int{1, 2, 3}, 3))
 }
