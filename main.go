@@ -3,15 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/ladlod/leetcode/week_contest"
+	"github.com/ladlod/leetcode/common_list"
 )
 
 func main() {
-	fmt.Println(week_contest.NumberOfUniqueGoodSubsequences("101"))
+	fmt.Println(common_list.Convert("PAYPALISHIRING", 3))
 }
-
-// 0 1
-// - -
-// [] ["1"]
-// ["0", "01"] ["1"]
-// ["0", "01"], ["10", "101", "11", "1"]
