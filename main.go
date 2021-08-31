@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.Convert("PAYPALISHIRING", 3))
+	fmt.Println(common_list.LengthOfLongestSubstring("abcabcbb"))
 }
