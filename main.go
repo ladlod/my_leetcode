@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/ladlod/leetcode/common_list"
 )
 
 func main() {
-	fmt.Println(common_list.LengthOfLongestSubstring("abcabcbb"))
+	list := common_list.BuildList([]int{1})
+	list.Print()
+	common_list.ReorderList(list)
+	// fmt.Println(common_list.LengthOfLongestSubstring("abcabcbb"))
 }
