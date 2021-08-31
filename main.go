@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.MySqrt(93000))
+	fmt.Println(common_list.FindPeakElementV2([]int{1, 2, 3, 4}))
 }
