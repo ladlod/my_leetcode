@@ -37,3 +37,21 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	}
 	return rtn.Next
 }
+
+func reverseBetweenV2(head *ListNode, m int, n int) *ListNode {
+	pre := new(ListNode)
+	pre.Next = head
+	p, q := pre, pre
+	for i := 0; i < m-1; i++ {
+		p = p.Next
+	}
+	for i := 0; i < n; i++ {
+		q = q.Next
+	}
+	start := p.Next
+	end := q.Next
+	q.Next = nil
+	p.Next = ReverseList(start)
+	start.Next = end
+	return pre.Next
+}
