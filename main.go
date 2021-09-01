@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.MinWindowV1("a", "a"))
+	fmt.Println(common_list.MinWindowV1("ADOBECODEBANC", "ABC"))
 }

@@ -30,36 +30,36 @@ func MinWindowV1(s string, t string) string {
 		tMap[t[i]]++
 	}
 
-	slice := []byte{}
+	l, r := 0, 0
 	i := 0
 	for ; !sHasT(sMap, tMap) && i < len(s); i++ {
-		slice = append(slice, s[i])
 		sMap[s[i]]++
+		r++
 	}
 	if !sHasT(sMap, tMap) {
 		return ""
 	}
-	res := string(slice)
+	res := string(s[l:r])
 
 	for ; i <= len(s); i++ {
 		for {
-			sMap[slice[0]]--
+			sMap[s[l]]--
 			if sHasT(sMap, tMap) {
-				slice = slice[1:]
-				res = string(slice)
+				l++
+				res = string(s[l:r])
 			} else {
-				sMap[slice[0]]++
+				sMap[s[l]]++
 				break
 			}
 		}
 
 		if i != len(s) {
-			sMap[slice[0]]--
-			slice = slice[1:]
-			sMap[s[i]]++
-			slice = append(slice, s[i])
+			sMap[s[l]]--
+			l++
+			sMap[s[r]]++
+			r++
 		}
-		fmt.Println(string(slice))
+		fmt.Println(s[l:r])
 	}
 
 	return res
