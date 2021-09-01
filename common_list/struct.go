@@ -35,6 +35,23 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func BuildTree(vals *[]int) *TreeNode {
+	if len(*vals) <= 0 {
+		return nil
+	}
+	if (*vals)[0] == -1 {
+		*vals = (*vals)[1:]
+		return nil
+	}
+	res := &TreeNode{
+		Val: (*vals)[0],
+	}
+	*vals = (*vals)[1:]
+	res.Left = BuildTree(vals)
+	res.Right = BuildTree(vals)
+	return res
+}
+
 func (t *TreeNode) Print() {
 	if t == nil {
 		return
