@@ -9,6 +9,8 @@
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 # 动态规划做法
+# 思路：dp：dp[j] = max(nums[i-j]<nums[j], max(res[j-i]+1))
+# 时间复杂度O(n^2)
 def lengthOfLISDp(nums):
     l = len(nums)
     res = [1 for i in range(l)]
@@ -19,6 +21,9 @@ def lengthOfLISDp(nums):
     return res
 
 # 贪心做法
+# 思路：记录一个结果数组，遍历原始数组，如果值比结果数组最后一个值大，则直接append到结果数组，
+#                                 如果值比结果数组最后一个值大，则找到结果数组中第一个比该值大的数，替换它，保证结果数组递增阶梯幅度最小
+# 时间复杂度O(nlogn)
 def lengthOfLISTx(nums):
     l = len(nums)
     if l <= 0: return 0
