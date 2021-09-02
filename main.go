@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/ladlod/leetcode/common_list"
 )
 
 func main() {
-	fmt.Println(common_list.LongestIncreasingPath([][]int{{9, 9, 4}, {6, 6, 8}, {2, 1, 1}}))
+	list1 := common_list.BuildList([]int{1})
+	list2 := common_list.BuildList([]int{0})
+	list := common_list.MergeKLists([]*common_list.ListNode{list1, list2})
+	list.Print()
 }
