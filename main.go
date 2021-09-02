@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.Trap([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}))
+	fmt.Println(common_list.MyAtoi("+001 023 abc123"))
 }
