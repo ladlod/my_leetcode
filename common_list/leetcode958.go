@@ -11,11 +11,33 @@ package common_list
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 // 思路：
-// 层序遍历二叉树，给二叉树结点编号
+// 中序遍历二叉树给节点编号，左子节点编号为2*i, 右子节点为2*i+1，并记录节点总数，最后大节点编号等于节点总数即为完全二叉树
 func isCompleteTree(root *TreeNode) bool {
 	if root == nil {
 		return false
 	}
+	root.Val = 1
+	l, max := 1, 1
+	midTravlTree(root, &l, &max)
+	return l == max
+}
 
-	return false
+func midTravlTree(root *TreeNode, l *int, max *int) {
+	if root.Left != nil {
+		root.Left.Val = 2 * root.Val
+		*l++
+		if root.Left.Val > *max {
+			*max = root.Left.Val
+		}
+		midTravlTree(root.Left, l, max)
+	}
+	if root.Right != nil {
+		root.Right.Val = 2*root.Val + 1
+		*l++
+		if root.Right.Val > *max {
+			*max = root.Right.Val
+		}
+		midTravlTree(root.Right, l, max)
+	}
+	return
 }
