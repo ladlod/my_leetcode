@@ -23,7 +23,7 @@ import (
 type Codec struct {
 }
 
-func Constructor() Codec {
+func ConstructorCodeTree() Codec {
 	return Codec{}
 }
 
