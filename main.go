@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.FirstMissingPositive([]int{-1, 1, 3, 7, 9, 5}))
+	fmt.Println(common_list.Permute([]int{1, 2, 3}))
 }
