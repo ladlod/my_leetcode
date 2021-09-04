@@ -1,6 +1,6 @@
 # !/usr/bin/python
 # -*-coding: utf-8 -*-
-def maxProfit(values):
+def maxProfit1(values):
     if len(values) < 2: return 0
     income = values[1] - values[0]
     res = income
@@ -10,4 +10,4 @@ def maxProfit(values):
     return max(res, 0)
 
 if __name__ == '__main__':
-    print(maxProfit([7,1,5,3,6,4]))
+    print(maxProfit1([7,1,5,3,6,4]))

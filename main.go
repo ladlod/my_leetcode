@@ -7,9 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.FindDiagonalOrderV2([][]int{
-		{1, 2, 3, 4, 5},
-		{6, 7, 8, 9, 10},
-		{11, 12, 13, 14, 15},
-	}))
+	fmt.Println(common_list.MaxProfit3([]int{7, 6, 4, 3, 1}))
 }
