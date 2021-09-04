@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.Permute([]int{1, 2, 3}))
+	fmt.Println(common_list.DailyTemperatures([]int{73, 74, 75, 71, 69, 72, 76, 73}))
 }
