@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.FindMaximumXOR([]int{3, 10, 5, 25, 2, 8}))
+	fmt.Println(common_list.FirstMissingPositive([]int{-1, 1, 3, 7, 9, 5}))
 }
