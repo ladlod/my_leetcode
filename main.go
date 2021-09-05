@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/ladlod/leetcode/common_list"
+	"github.com/ladlod/leetcode/week_contest"
 )
 
 func main() {
-	fmt.Println(common_list.MaxProfit3([]int{7, 6, 4, 3, 1}))
+	fmt.Println(week_contest.FirstDayBeenInAllRooms([]int{0, 1, 2, 0}))
 }
