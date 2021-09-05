@@ -7,5 +7,13 @@ import (
 )
 
 func main() {
-	fmt.Println(week_contest.FirstDayBeenInAllRooms([]int{0, 1, 2, 0}))
+	test1, test2 := []int{}, []int{}
+	for i := 10000; i > 0; i-- {
+		test1 = append(test1, i)
+	}
+	for i := 1; i <= 10000; i++ {
+		test2 = append(test2, i)
+	}
+	fmt.Println(week_contest.GcdSort(test1))
+	fmt.Println(week_contest.GcdSort(test2))
 }
