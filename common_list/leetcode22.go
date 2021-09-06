@@ -35,3 +35,28 @@ func innnerGenerateParenthesis(i, n int) []string {
 	fmt.Println(i, n, res)
 	return res
 }
+
+// 思路：
+// 动态规划：
+// 记录dp[i]为n=i时的所有括号组合
+// 那么，对于dp[1]，其可能的组合为 '()'
+//      对于dp[2]，其可能的组合为 '(())','()()'
+//      对于dp[3]，其可能的组合为 ‘()(())', '()()()', '(())()', '(()())', '((()))'
+// 所以，可以推导出递推公式，dp[i] = '('+dp[p]+')'+dp[q]， 其中p+q = i-1
+
+func GenerateParenthesisV2(n int) []string {
+	dp := make([][]string, n+1)
+	dp[0] = []string{""}
+
+	for i := 1; i <= n; i++ {
+		dp[i] = make([]string, 0)
+		for p := 0; p <= i-1; p++ {
+			for _, v1 := range dp[p] {
+				for _, v2 := range dp[i-1-p] {
+					dp[i] = append(dp[i], "("+v1+")"+v2)
+				}
+			}
+		}
+	}
+	return dp[n]
+}
