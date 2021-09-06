@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.GenerateParenthesis(3))
+	fmt.Println(common_list.RestoreIpAddressesV2("101023"))
 }
