@@ -7,8 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.HasCicle(map[int][]int{
-		1: {2, 3},
-		2: {3, 4},
-	}))
+	fmt.Println(common_list.GenerateParenthesis(3))
 }
