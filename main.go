@@ -7,5 +7,8 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.LongestConsecutive([]int{1, 2, 0, 1}))
+	fmt.Println(common_list.HasCicle(map[int][]int{
+		1: {2, 3},
+		2: {3, 4},
+	}))
 }
