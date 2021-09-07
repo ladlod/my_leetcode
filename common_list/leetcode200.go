@@ -19,7 +19,7 @@ func NumIslands(grid [][]byte) int {
 	for i := 0; i < len(grid); i++ {
 		for j := 0; j < len(grid[0]); j++ {
 			if grid[i][j] == '1' {
-				dpsIslands(grid, i, j)
+				dfsIslands(grid, i, j)
 				res++
 			}
 		}
@@ -28,13 +28,19 @@ func NumIslands(grid [][]byte) int {
 	return res
 }
 
-func dpsIslands(grid [][]byte, i, j int) {
+func dfsIslands(grid [][]byte, i, j int) {
 	grid[i][j] = '0'
+	if i > 0 && grid[i-1][j] == '1' {
+		dfsIslands(grid, i-1, j)
+	}
+	if j > 0 && grid[i][j-1] == '1' {
+		dfsIslands(grid, i, j-1)
+	}
 	if i < len(grid)-1 && grid[i+1][j] == '1' {
-		dpsIslands(grid, i+1, j)
+		dfsIslands(grid, i+1, j)
 	}
 	if j < len(grid[0])-1 && grid[i][j+1] == '1' {
-		dpsIslands(grid, i, j+1)
+		dfsIslands(grid, i, j+1)
 	}
 }
 
