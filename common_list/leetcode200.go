@@ -14,7 +14,6 @@ import "fmt"
 
 // 思路：
 // 深度优先搜索 所有非起点的遍历到的节点置0，最后统计1的个数
-// 并查集
 func NumIslands(grid [][]byte) int {
 	res := 0
 	for i := 0; i < len(grid); i++ {
@@ -39,6 +38,7 @@ func dpsIslands(grid [][]byte, i, j int) {
 	}
 }
 
+// 并查集
 type pSet []int
 
 func initPset(size int) pSet {
