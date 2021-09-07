@@ -13,8 +13,31 @@ import "fmt"
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 // 思路：
-// 深度优先搜索
+// 深度优先搜索 所有非起点的遍历到的节点置0，最后统计1的个数
 // 并查集
+func NumIslands(grid [][]byte) int {
+	res := 0
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[0]); j++ {
+			if grid[i][j] == '1' {
+				dpsIslands(grid, i, j)
+				res++
+			}
+		}
+	}
+
+	return res
+}
+
+func dpsIslands(grid [][]byte, i, j int) {
+	grid[i][j] = '0'
+	if i < len(grid)-1 && grid[i+1][j] == '1' {
+		dpsIslands(grid, i+1, j)
+	}
+	if j < len(grid[0])-1 && grid[i][j+1] == '1' {
+		dpsIslands(grid, i, j+1)
+	}
+}
 
 type pSet []int
 
@@ -37,7 +60,7 @@ func (s pSet) merge(a, b int) {
 	s[s.find(b)] = s[a]
 }
 
-func NumIslands(grid [][]byte) int {
+func NumIslandsV2(grid [][]byte) int {
 	h := len(grid)
 	if h <= 0 {
 		return 0
