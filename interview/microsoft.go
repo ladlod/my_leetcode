@@ -5,12 +5,6 @@ import (
 	"sort"
 )
 
-func main() {
-	// fmt.Println(parentheses("]"))
-	// fmt.Println(anagram("anagram", "nagaramb"))
-	// fmt.Println(findMax([]int{2, 5, 5}, 1))
-}
-
 // Validate Parentheses (string contains chars '(', ')', '[', ']', '{', '}')	s = "()[]{}"
 func parentheses(str string) bool {
 	var stack []rune
