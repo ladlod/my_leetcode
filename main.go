@@ -7,9 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.ExistStr([][]byte{
-		{'a', 'b', 'c', 'e'},
-		{'s', 'f', 'c', 's'},
-		{'a', 'd', 'e', 'e'},
-	}, "abccedasf"))
+	fmt.Println(common_list.IsMatch("ab", ".*"))
 }
