@@ -10,7 +10,8 @@ package common_list
 // 链接：https://leetcode-cn.com/problems/reverse-nodes-in-k-group
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-// 思路：双指针
+// 思路
+// 双指针，快指针与慢指针间隔k，每次反转快慢指针之间的链表
 func ReverseKGroup(head *ListNode, k int) *ListNode {
 	pre := new(ListNode)
 	pre.Next = head
@@ -57,8 +58,8 @@ func ReverseListV2(head *ListNode) *ListNode {
 
 func ReverseList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
-        return head
-    }
+		return head
+	}
 	p, n := head, head.Next
 	head.Next = nil
 	for n != nil {

@@ -1,11 +1,10 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/ladlod/leetcode/common_list"
 )
 
 func main() {
-	fmt.Println(common_list.AddStrings("1234567", "7"))
+	list := common_list.BuildList([]int{1, 1, 1, 2, 2, 2, 3, 3, 4, 5})
+	common_list.DeleteDuplicates(list).Print()
 }

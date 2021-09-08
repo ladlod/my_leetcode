@@ -13,7 +13,7 @@ package common_list
 // 链接：https://leetcode-cn.com/problems/reorder-list
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-// 思路：寻找中点，反转链表，之后双指针
+// 思路：寻找中点，反转后半个链表，之后双指针组合链表
 
 func ReorderList(head *ListNode) {
 	// step1: find mid
