@@ -4,18 +4,20 @@ func QuickSort(nums []int) {
 	if len(nums) <= 1 {
 		return
 	}
-	d := len(nums) / 2
-	for i, j := 0, len(nums)-1; i < j; {
-		if nums[i] < nums[d] {
-			i++
-		} else if nums[j] > nums[d] {
-			j--
-		} else {
-			nums[i], nums[j] = nums[j], nums[i]
-			i++
-			j--
+	base := nums[0]
+	l, r := 0, len(nums)-1
+
+	for l < r {
+		for l < r && nums[r] > base {
+			r--
 		}
+		nums[l] = nums[r]
+		for l < r && nums[l] < base {
+			l++
+		}
+		nums[r] = nums[l]
 	}
-	QuickSort(nums[:d])
-	QuickSort(nums[d+1:])
+	nums[l] = base
+	QuickSort(nums[:l])
+	QuickSort(nums[l+1:])
 }
