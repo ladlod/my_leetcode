@@ -8,11 +8,11 @@ func QuickSort(nums []int) {
 	l, r := 0, len(nums)-1
 
 	for l < r {
-		for l < r && nums[r] > base {
+		for l < r && nums[r] >= base {
 			r--
 		}
 		nums[l] = nums[r]
-		for l < r && nums[l] < base {
+		for l < r && nums[l] <= base {
 			l++
 		}
 		nums[r] = nums[l]

@@ -17,6 +17,28 @@ package common_list
 
 // 尝试设计时间复杂度为 O(n)、空间复杂度为 O(1) 的算法解决此问题。
 
+// 思路：
+// 对于一组数，多数元素数的个数必定比其它数多
+// 我们可以选举数组中的第一个数为多数元素，正序遍历，遇到该数时统计+1，非该数时，统计-1
+// 若统计数据为0，说明前序数组里我们选举出的数据与其它数据同样多，令这些元素互相抵消
+// 排除这些数，重新进行选举遍历，直至遍历全部数组，最后一个选举出来的数就是我们要找的多数元素
 func majorityElement(nums []int) int {
-	return 0
+	if len(nums) <= 0 {
+		return 0
+	}
+
+	res := nums[0]
+	count := 1
+	for i := 1; i < len(nums); i++ {
+		if count == 0 {
+			res = nums[i]
+		}
+		if nums[i] == res {
+			count++
+		} else {
+			count--
+		}
+	}
+
+	return res
 }
