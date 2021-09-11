@@ -1,6 +1,6 @@
 package common_list;
 
-public class leetcode04 {
+public class leetcode4 {
     public static void main(String args[]) {
         int[] nums1 = { 3, 4 };
         int[] nums2 = { 1, 2 };

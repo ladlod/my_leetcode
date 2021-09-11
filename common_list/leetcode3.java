@@ -2,7 +2,7 @@ package common_list;
 
 import java.util.Scanner;
 
-public class leetcode03 {
+public class leetcode3 {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
