@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.StrStrKMP("mississippi", "issip"))
+	fmt.Println(common_list.MaximumSwap(41234))
 }
