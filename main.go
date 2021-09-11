@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.MaximumSwap(41234))
+	fmt.Println(common_list.FindDuplicateV2([]int{1, 2, 3, 2}))
 }
