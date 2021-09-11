@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(common_list.FindMedianSortedArrays([]int{}, []int{1}))
+	fmt.Println(common_list.StrStrKMP("mississippi", "issip"))
 }
