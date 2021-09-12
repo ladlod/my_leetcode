@@ -21,6 +21,7 @@ func LongestPalindromeSubseq(s string) int {
 	}
 	res := make([][]int, l)
 	for i := l - 1; i >= 0; i-- {
+		res[i] = make([]int, l)
 		for j := i; j < l; j++ {
 			if i == j {
 				res[i][j] = 1
@@ -34,7 +35,7 @@ func LongestPalindromeSubseq(s string) int {
 				if s[i] == s[j] {
 					res[i][j] = res[i+1][j-1] + 2
 				} else {
-					res[i][j] = res[i+1][j-1]
+					res[i][j] = max(res[i][j-1], res[i+1][j])
 				}
 			}
 		}
