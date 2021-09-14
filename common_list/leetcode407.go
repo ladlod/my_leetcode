@@ -6,7 +6,7 @@ import "fmt"
 
 // 思路
 // 小顶堆记录当前最短板，
-// 堆顶出堆，入堆堆四个方向的板子，res += 堆顶高度-入堆的板子高度
+// 堆顶出堆，入堆堆四个方向的板子，如果板子高度低于出堆的板子高度，则令入堆的板子高度等于该板子高度，res += 堆顶高度-入堆的板子高度
 func TrapRainWater(heightMap [][]int) int {
 	if len(heightMap) <= 0 {
 		return 0
@@ -52,12 +52,12 @@ func TrapRainWater(heightMap [][]int) int {
 	}
 
 	ans := 0
-	fmt.Println(flag, ans)
 	for len(heap.heap) > 0 {
+		// 堆顶出堆
 		top := heap.pop()
 		if top.x > 0 && !flag[top.x-1][top.y] {
 			flag[top.x-1][top.y] = true
-			if heightMap[top.x-1][top.y] < top.val {
+			if heightMap[top.x-1][top.y] < top.val { // 如果小于堆顶高度，结果++，入堆一个位置不变，高度等于堆顶的板子
 				ans += top.val - heightMap[top.x-1][top.y]
 				heap.insert(&Pos{
 					val: top.val,
@@ -65,7 +65,7 @@ func TrapRainWater(heightMap [][]int) int {
 					y:   top.y,
 				})
 			} else {
-				heap.insert(&Pos{
+				heap.insert(&Pos{ // 如果大于等于堆顶高度，直接入堆该板子
 					val: heightMap[top.x-1][top.y],
 					x:   top.x - 1,
 					y:   top.y,
